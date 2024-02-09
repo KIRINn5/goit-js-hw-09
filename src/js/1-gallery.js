@@ -84,10 +84,10 @@ document.addEventListener("DOMContentLoaded", function() {
           const galleryItem = document.createElement('li');
           galleryItem.classList.add('gallery-item');
   
-          const galleryLink = document.createElement('a');
-          galleryLink.classList.add('gallery-link');
-          galleryLink.href = image.original;
-          galleryLink.download = 'false';
+          const gallery = document.createElement('a');
+          gallery.classList.add('gallery-link');
+          gallery.href = image.original;
+          gallery.download = 'false';
   
           const galleryImage = document.createElement('img');
           galleryImage.classList.add('gallery-image');
@@ -96,8 +96,8 @@ document.addEventListener("DOMContentLoaded", function() {
           galleryImage.width = 800;
           galleryImage.height = 600;
   
-          galleryLink.appendChild(galleryImage);
-          galleryItem.appendChild(galleryLink);
+          gallery.appendChild(galleryImage);
+          galleryItem.appendChild(gallery);
   
           return galleryItem;
       }
